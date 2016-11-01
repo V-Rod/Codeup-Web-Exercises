@@ -22,7 +22,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact Me</a></li>
@@ -37,7 +37,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <!--<li><a href="#">Link</a></li>-->
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Useful Links<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Useful Links<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="http://codeup.com" target="_blank">Codeup</a></li>
                         <li><a href="https://slack.com/" target="_blank">Slack</a></li>
@@ -52,27 +53,35 @@
 </nav>
 
 <div class="main" id="top">
+
     <div class="container">
         <h1>Welcome to my Site!</h1>
         <p>Please insert heading here.</p>
-
     </div>
+
+    <div class="avatar">
+        <img class="img-circle" src="img/IMG_0526.JPG" id="avatar">
+    </div>
+
+    <div class="main-body">
+        <p>Spicy jalapeno bacon ipsum dolor amet aute ham hock eu dolor, ad frankfurter esse occaecat enim culpa
+            prosciutto dolore beef ribs bacon.
+            Porchetta kielbasa do enim. Meatloaf proident swine short ribs non velit.
+            Pancetta pariatur pig boudin pork, et dolore prosciutto qui pork belly culpa drumstick.</p>
+    </div>
+
 </div>
 
 <div class="about" id="about">
+
     <div class="container">
         <h1>This is the About section</h1>
         <small>Another subheading</small>
     </div>
 
-    <div class="avatar">
-    <div id="avatar"></div>
-    </div>
-
     <div class="nav-top">
         <a href="#top">Back to top</a>
     </div>
-
 
 </div>
 
@@ -88,12 +97,104 @@
 
 <div class="contact" id="contact">
     <div class="container">
-        <h1>Contact Me</h1>
+        <h1>Contact Form</h1>
     </div>
+
     <div class="nav-top">
         <a href="#top">Back to top</a>
     </div>
 
+
+    <div class="container-contact">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+
+
+                <form id="contact-form" method="post" action="contact.php" role="form">
+
+                    <div class="messages"></div>
+
+                    <div class="controls">
+
+                        <div class=row></div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_name">Firstname *</label>
+                                <input id="form_name" type="text" name="name" class="form-control"
+                                       placeholder="Please enter your firstname *" required="required"
+                                       data-error="Firstname is required">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_lastname">Lastname *</label>
+                                <input id="form_lastname" type="text" name="surname" class="form-control"
+                                       placeholder="Please enter your lastname *" required="required"
+                                       data-error="Lastname is required">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_email">Email *</label>
+                                <input id="form_email" type="email" name="email" class="form-control"
+                                       placeholder="Please enter your email address *" required="required"
+                                       data-error="Valid email is required">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_phone">Phone</label>
+                                <input id="form_phone" type="tel" name="phone" class="form-control"
+                                       placeholder="Please enter your phone">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="form_message">Message *</label>
+                                <textarea name="message" id="form_message" class="form-control"
+                                          placeholder="Message me! *" rows="4" required="required"
+                                          data-error="Please, leave us a message"></textarea>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <input type="submit" class="btn btn-success btn-send" value="Send message">
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <p class="text-muted"><strong>*</strong>These fields are required.</p>
+                        </div>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

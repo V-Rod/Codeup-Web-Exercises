@@ -7,7 +7,6 @@ body {
     top: 0;
 }
 
-
 .main {
     text-align: center;
     background: url("../img/bos.jpg") no-repeat center center;
@@ -25,10 +24,18 @@ body {
     position: center;
 }
 
+.main-body {
+    color: #FFF;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5em;
+}
+
 .about {
     text-align: center;
     background-size: cover;
-    height: 50em;
+    height: 55em;
     background-color: #0f0f0f;
 
 }
@@ -40,8 +47,8 @@ body {
 .portfolio {
     text-align: center;
     background-size: cover;
-    height: 50em;
-    background-color: #5e5e5e;
+    height: 55em;
+    background-color: #3c3c3c;
 }
 
 .portfolio .container {
@@ -61,13 +68,12 @@ body {
     background: url("../img/bos.jpg") no-repeat center center;
     text-align: center;
     background-size: cover;
-    height: 600px;
-    background-color: #1c1c1c;
+    height: 55em;
     background-attachment: fixed;
 }
 
 .contact .container {
-    top: 3em;
+    top: 5em;
 }
 
 .nav-top {
@@ -78,18 +84,27 @@ body {
 }
 
 .avatar {
-    float: right;
-    padding-top: 6em;
+    /*float: right;*/
+    padding-top: 7em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 #avatar {
-    background-image: url(../img/IMG_0526.jpg);
+    background: url(../img/IMG_0526.jpg);
     width: 150px;
     height: 150px;
     background-size: cover;
     background-position: center;
     border-radius: 50%;
     overflow: hidden;
+}
+
+.container-contact {
+    padding-top: 10em;
+    color: #FFF;
 }
 
 
