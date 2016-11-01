@@ -1,2 +1,7 @@
 .idea/*
 portfolio/.idea/*
+.DS_Store
+css/.DS_Store
+img/.DS_Store
+portfolio/.DS_Store
+portfolio/img/.DS_Store

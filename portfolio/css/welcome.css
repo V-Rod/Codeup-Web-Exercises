@@ -12,7 +12,7 @@ body {
     text-align: center;
     background: url("../img/bos.jpg") no-repeat center center;
     background-size: cover;
-    height: 600px;
+    height: 55em;
     background-attachment: fixed;
 
 }
@@ -21,40 +21,65 @@ body {
     max-width: 940px;
     margin: 0 auto;
     color: #FFF;
-    top: 100px;
+    top: 5em;
     position: center;
 }
 
 .about {
     text-align: center;
     background-size: cover;
-    height: 600px;
+    height: 50em;
     background-color: #0f0f0f;
+
 }
 
-.img {
-    float: left;
+.about .container {
+    top: 5em;
 }
 
 .portfolio {
     text-align: center;
     background-size: cover;
-    height: 600px;
+    height: 50em;
     background-color: #5e5e5e;
+}
+
+.portfolio .container {
+    top: 5em;
 }
 
 .container {
     max-width: 940px;
     margin: 0 auto;
     color: #FFF;
-    top: 100px;
+    /*top: 10.7em;*/
     position: relative;
     text-align: center;
+}
+
+.contact {
+    background: url("../img/bos.jpg") no-repeat center center;
+    text-align: center;
+    background-size: cover;
+    height: 600px;
+    background-color: #1c1c1c;
+    background-attachment: fixed;
+}
+
+.contact .container {
+    top: 3em;
 }
 
 .nav-top {
     color: #286090;
     float: left;
+    /*padding-top: 1em;*/
+
+}
+
+.avatar {
+    float: right;
+    padding-top: 6em;
 }
 
 #avatar {
@@ -65,9 +90,6 @@ body {
     background-position: center;
     border-radius: 50%;
     overflow: hidden;
-    float: right;
 }
 
-.container #avatar {
-    float: right;
-}
+
