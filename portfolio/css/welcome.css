@@ -1,0 +1,73 @@
+body {
+    /*padding-top: 70px;*/
+    font-family: 'Michroma', sans-serif;
+}
+
+.navbar-fixed-top {
+    top: 0;
+}
+
+
+.main {
+    text-align: center;
+    background: url("../img/bos.jpg") no-repeat center center;
+    background-size: cover;
+    height: 600px;
+    background-attachment: fixed;
+
+}
+
+.main .container {
+    max-width: 940px;
+    margin: 0 auto;
+    color: #FFF;
+    top: 100px;
+    position: center;
+}
+
+.about {
+    text-align: center;
+    background-size: cover;
+    height: 600px;
+    background-color: #0f0f0f;
+}
+
+.img {
+    float: left;
+}
+
+.portfolio {
+    text-align: center;
+    background-size: cover;
+    height: 600px;
+    background-color: #5e5e5e;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    color: #FFF;
+    top: 100px;
+    position: relative;
+    text-align: center;
+}
+
+.nav-top {
+    color: #286090;
+    float: left;
+}
+
+#avatar {
+    background-image: url(../img/IMG_0526.jpg);
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    overflow: hidden;
+    float: right;
+}
+
+.container #avatar {
+    float: right;
+}

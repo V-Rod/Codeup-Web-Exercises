@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>My First HTML Form</title>
+</head>
+    <body>
+        <h2>User Login</h2>
+
+        <form method="POST" action="http://requestb.in/y0v4quy0">
+            <p>
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" placeholder="Enter Your Username">
+            </p>
+            <p>
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder="Enter Your Password">
+            </p>
+            
+            
+            <p>
+                <input type="submit" value="Login">
+                <!--<button type="submit">Submit</button> <!--This can be used instead of <input type="submit>-->
+
+            </p>
+        </form>
+
+        <h2>Compose an Email</h2>
+        <form method="post" action="http://requestb.in/y0v4quy0">
+
+            <label for="from">From:</label>
+            <input id="from" name="from" type="text" placeholder="Enter Your Email"><br>
+
+            <br><label for="to">To:</label>
+            <input id="to" name="to" type="text" placeholder="Enter Recipient Here"><br>
+
+            <br><label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text">
+
+            <p>
+            <textarea id="email_body" name="email_body" rows="5" cols="40" placeholder="Content Here"></textarea>
+            </p>
+
+            <button type="submit">Send</button>
+
+            <p>
+                <input type="checkbox" id="mailing-list" name="mailing-list" value="yes" checked>
+                <label for="mailing-list">Save a copy to sent folder?</label>
+            </p>
+        </form>
+
+        <h2>Multiple Choice Test</h2>
+
+            <form method="post" action="http://requestb.in/y0v4quy0">
+            <p>What is the fastest production car in the world?</p>
+
+            <label>
+
+                <input type="radio" id="q1" name="q1" value="venom">
+
+                Venom GT
+
+            </label>
+
+            <label>
+
+                <input type="radio" id="q1" name="q1" value="veyron">
+
+                Bugatti Veyron GT
+
+            </label>
+
+            <label>
+
+                <input type="radio" id="q1" name="q1" value="mustang">
+
+                Ford Mustang Shelby GT500
+
+            </label>
+
+            <p>Which of these brands are the most expensive?</p>
+
+                <label>
+
+                    <input type="checkbox" id="q2" name="q2" value="Ferrari">
+
+                    Ferrari
+
+                </label>
+
+                <label>
+
+                    <input type="checkbox" id="q2" name="q2" value="Ford">
+
+                    Ford
+
+                </label>
+
+                <label>
+
+                    <input  type="checkbox" id="q2" name="q2" value="Kia">
+
+                    Kia
+
+                </label>
+
+
+            <p><input type="submit"></p>
+
+            </form>
+
+            <form method="post" action="http://requestb.in/y0v4quy0">
+                <label for="players"><strong>San Antonio Spurs Greatest Players</strong></label>
+                    <p>
+                    <select id="players" name="players[]" multiple>
+                        <option value="1">Tim Duncan</option>
+                        <option value="2">David Robinson</option>
+                        <option value="3">George "Ice Man" Gervin</option>
+                        <option value="4">Dennis Rodman</option>
+                     </p>
+
+                    </select>
+                        <p>
+                            <input type="submit" value="Vote Now">
+                        </p>
+                </form>
+
+
+        <h2>Select Testing</h2>
+
+        <form method="POST" action="http://requestb.in/zxr4x2zx">
+
+            <label for="election">Did you vote?</label>
+
+                <select id="election" name="election">
+
+                    <option value="1">Yes</option>
+                    <option value="0" selected>No</option> <!--'selected' is the default option-->
+                
+                </select>
+            <p><input type="submit"></p>
+        </form>
+
+    </body>
+</html>

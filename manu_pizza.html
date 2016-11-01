@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="css/manu_pizza.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+<div class="header"> <!--Here is where the header of the page resides-->
+    <div class="container">
+        <h1>Manu's Pizza Palace</h1>
+        <p>Welcome to Manu's Pizza Palace Online Ordering System.</p>
+        </div>
+</div>
+
+<div class="nav">
+    <div class="nav-bar">
+        <ul>
+            <li>Home</li>
+            <li>Menu</li>
+            <li>Specials</li>
+            <li>About</li>
+            <li>Feedback</li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="main">
+            <div class="form">
+                <form method="post" action="http://requestb.in/1fbuyyd1">
+
+                    <p>
+                        <label for="name">
+                            Name
+                            <input type="text" id="name" name="name" placeholder="Enter your name">
+                        </label>
+                    </p>
+
+                    <p>
+                        <label for="address">
+                            Address
+                        <input type="text" id="address" name="address" placeholder="Enter your address">
+                        </label>
+                    </p>
+
+                    <p>
+                        <label for="email-address">Email</label>
+                        <input type="email" id="email-address" name="email-address" placeholder="name@domain.com" required>
+                    </p>
+
+                    <p>
+                        <label for="phone-number">Phone Number</label>
+                        <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your phone number">
+                    </p>
+                        <input class="btn" type="submit" name="submit" value="Send it!">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

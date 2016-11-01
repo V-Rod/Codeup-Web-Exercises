@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>The Not-Starbucks Coffee Co. Order Form</title>
+    </head>
+    <body>
+        <div>
+            <h1>Not-Starbucks Coffee Co. Coffee Order Form</h1>
+            <form method="post" action="http://requestb.in/109eas51">
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+                <br>
+                <br>
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address">
+                <br>
+                <br>
+                <label for="city">City</label>
+                <input type="text" id="city" name="city">
+                <br>
+                <br>
+                <label for="state">State</label>
+                <select name="state" id="state">
+                    <option value="tx">TX</option>
+                    <option value="na">NA</option>
+                </select>
+                <br>
+                <br>
+                <label for="zip-code">Zip Code</label>
+                <input type="text" id="zip-code" name="zip-code">
+
+                <p>
+                <label for="roast">Type of Roast Desired</label>
+                    <select id="roast" name="roast">
+                        <option value="1" selected>Robust</option>
+                        <option value="2">Lethargic</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="quantity">Quantity</label>
+                    <select name="quantity" id="quantity">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <p>
+                        <label for="auto-renewal">Auto-Renewal?</label>
+                        <input type="checkbox" id="auto-renewal" name="auto-renewal" checked>
+                    </p>
+                <input type="submit"></input>
+            </form>
+        </div>
+
+    </body>
+</html>

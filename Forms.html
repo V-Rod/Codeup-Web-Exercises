@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+</head>
+    <body>
+        <form method="get" action="http://www.google.com/search">
+            <label for="q">Search term</label>
+            <input type="text" id="q" name="q" placeholder="Enter input here">
+            <!--the id and name have to match the label in order to click the text and select the search bar and
+            in order to be successful in sending and getting a response-->
+            <input type="hidden" name="secret" value="mysecret">
+            <input type="submit">
+            </form>
+
+            <form method="POST">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password here">
+            <input type="submit">
+            <!--Command slash is keyboard command for comments-->
+        </form>
+    </body>
+</html>

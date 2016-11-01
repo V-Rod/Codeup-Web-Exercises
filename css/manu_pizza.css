@@ -1,0 +1,65 @@
+* {
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: darkred;
+    background-image: url("../img/pizza_background.jpg");
+    z-index: 1000;
+
+}
+
+.header p{
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.nav {
+    background-color: yellow;
+    
+
+
+}
+
+.nav-bar {
+    text-align: center;
+    width: auto;
+
+}
+
+.container {
+    text-align: center;
+}
+
+
+
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: papayawhip;
+    margin: 0;
+    font-size: 100px;
+}
+
+p {
+    font-family: Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+
+
+}
+
+li {
+    display: inline;
+    text-transform: uppercase;
+    text-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    color: darkred;
+
+}
