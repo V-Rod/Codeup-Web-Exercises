@@ -1,6 +1,9 @@
 body {
     /*padding-top: 70px;*/
     font-family: 'Michroma', sans-serif;
+    margin: 0 auto;
+    line-height: 1.5;
+    padding: 0;
 }
 
 .navbar-fixed-top {
@@ -8,103 +11,86 @@ body {
 }
 
 .main {
-    text-align: center;
     background: url("../img/bos.jpg") no-repeat center center;
     background-size: cover;
     height: 55em;
     background-attachment: fixed;
+    color: white;
+    text-align: center;
 
 }
 
-.main .container {
-    max-width: 940px;
-    margin: 0 auto;
-    color: #FFF;
-    top: 5em;
-    position: center;
+#main_header {
+    padding-top: 7em;
+    text-align: right;
 }
 
-.main-body {
-    color: #FFF;
-    max-width: 50%;
+.avatar {
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 5em;
+    float: right;
+
+}
+
+#avatar {
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    overflow: hidden;
+
 }
 
 .about {
-    text-align: center;
     background-size: cover;
     height: 55em;
     background-color: #0f0f0f;
+    color: white;
+    text-align: center;
 
 }
 
-.about .container {
-    top: 5em;
+.col-sm-2 {
+    /*border: 1px solid deeppink;*/
+    text-align: left;
+}
+
+.col-sm-8 {
+
+    /*border: 1px solid lightpink;*/
 }
 
 .portfolio {
-    text-align: center;
     background-size: cover;
     height: 55em;
     background-color: #3c3c3c;
-}
+    color: white;
 
-.portfolio .container {
-    top: 5em;
-}
-
-.container {
-    max-width: 940px;
-    margin: 0 auto;
-    color: #FFF;
-    /*top: 10.7em;*/
-    position: relative;
     text-align: center;
 }
 
 .contact {
     background: url("../img/bos.jpg") no-repeat center center;
-    text-align: center;
     background-size: cover;
-    height: 55em;
+    height: 75em;
     background-attachment: fixed;
+    color: white;
+    text-align: center;
 }
 
-.contact .container {
-    top: 5em;
+.row {
+    padding-top: 4em;
 }
 
-.nav-top {
-    color: #286090;
-    float: left;
-    /*padding-top: 1em;*/
-
+.form-group { /*this is the form container DO NOT DELETE*/
+    text-align: left;
+    text-transform: uppercase;
+    background-color: darkgray;
+    color: #000;
 }
 
-.avatar {
-    /*float: right;*/
-    padding-top: 7em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 
-}
-
-#avatar {
-    background: url(../img/IMG_0526.jpg);
-    width: 150px;
-    height: 150px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.container-contact {
-    padding-top: 10em;
-    color: #FFF;
-}
 
 
