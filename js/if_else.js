@@ -26,8 +26,7 @@ if (flipACoin > 0) {
 
 /*var flipACoin = Math.floor(Math.random()* 2);*/
 
-var flipACoin > (0) ? "Buy a house" : "Buy a car" ;
-console.log();
+var flipACoin = (0) ? "Buy a house" : "Buy a car" ;
 
 /*var ryan = 250;
 var cameron = 180;
