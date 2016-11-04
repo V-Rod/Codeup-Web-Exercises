@@ -17,16 +17,17 @@ if (studentgrade >= 80) {
 
 var flipACoin = Math.floor(Math.random()* 2);
 
-if (flipACoin > 0) {
+if (flipACoin == 0) {
     console.log("Buy a house");
-} else{
-    console.log("Buy a car")
-};*/
+} else if (flipA Coin == 1){
+    console.log("Buy a car");
+} else {
+    console.log("Something went wrong")
+}*/
 
 
 /*var flipACoin = Math.floor(Math.random()* 2);*/
 
-var flipACoin = (0) ? "Buy a house" : "Buy a car" ;
 
 /*var ryan = 250;
 var cameron = 180;
@@ -50,3 +51,4 @@ if (george >= discount) {
 } else if (george < discount) {
     document.write("George needs to spend $" + (discount - george) + " to earn the discount.")
 };*/
+
