@@ -24,17 +24,6 @@ do {
 console.log('Yay I sold all cones');
 
 
-
-
-
-
-
-
-
-
-
-
-
 //DO NOT DELETE THIS IS CORRECT
 /*var i = 2;
 
