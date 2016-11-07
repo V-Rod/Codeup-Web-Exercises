@@ -35,20 +35,20 @@ var george = 320;
 var discount = 200;
 
 if (ryan>=discount) {
-    document.write("Ryan has spent $" + (ryan-discount) + " over the required amount of $200 and has earned a discount")
+    document.write("Ryan has spent $" + (ryan-discount) + " over the required amount of $200 and has earned a discount");
 } else if (ryan<discount) {
-    document.write(" Ryan needs to spend $" + (discount - ryan) + " to earn a discount.")
+    document.write(" Ryan needs to spend $" + (discount - ryan) + " to earn a discount.");
 };
 
 if (cameron >= discount) {
-    document.write("Cameron has spent $" + (cameron - discount) + " over the required amount of $200 and has earned a discount")
+    document.write("Cameron has spent $" + (cameron - discount) + " over the required amount of $200 and has earned a discount");
 } else if (cameron < discount) {
-    document.write("Cameron needs to spend $" + (discount - cameron) + " to earn a discount.")
+    document.write("Cameron needs to spend $" + (discount - cameron) + " to earn a discount.");
 };
 
 if (george >= discount) {
-    document.write("George has spent $" + (george - discount) + " over the required amount of $200 and has earned a discount")
+    document.write("George has spent $" + (george - discount) + " over the required amount of $200 and has earned a discount");
 } else if (george < discount) {
-    document.write("George needs to spend $" + (discount - george) + " to earn the discount.")
+    document.write("George needs to spend $" + (discount - george) + " to earn the discount.");
 };*/
 
