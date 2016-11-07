@@ -47,7 +47,7 @@ var discount;
      default:
          discountPercent = 0;
  }
- //apply the discontPercent
+ //apply the discountPercent
 discount = (total * discountPercent);
 console.log("You will pay " + (total - discount));
 console.log("Your original price: " + total);
@@ -56,10 +56,10 @@ console.log("You get a discount of " + (discountPercent));
 console.log("You saved $" +  discount + ".");
 console.log("You will pay $" + (total - discount));*/
 
+/*var luckyNumber = Math.floor(Math.random() * 13)
+//var month = 12;
 
-var month = 2;
-
-switch(month) {
+switch(luckyNumber) {
     case 1:
         console.log('January');
         break;
@@ -70,4 +70,59 @@ switch(month) {
         console.log('March');
         break;
     //etc etc etc DO NOT WRITE STUFF ON NOTES AND THEN COPY PASTE HERE IT WILL GIVE YOU SYNTAX ERRORS//
+    case 4:
+        console.log('April');
+        break;
+    case 5:
+        console.log('May');
+        break;
+    case 6:
+        console.log("June");
+        break;
+    case 7:
+        console.log('July');
+        break;
+    case 8:
+        console.log('August');
+        break;
+    case 9:
+        console.log('September');
+        break;
+    case 10:
+        console.log('October');
+        break;
+    case 11:
+        console.log('November');
+        break;
+    case 12:
+        console.log('December');
+}*/
+
+var luckyNumber = Math.floor(Math.random()* 6);
+var receipt = 60;
+
+switch (luckyNumber) {
+    case (luckyNumber = 0):
+        console.log("Your lucky number was " + luckyNumber + ". You get no discount.  You will have to pay $" + receipt + ".");
+        break;
+
+    case (luckyNumber = 1):
+        console.log("Your lucky number was " + luckyNumber + ". You get a 10% discount.  You will pay $" + (receipt - (receipt * 0.1)) + ".");
+        break;
+
+    case (luckyNumber = 2):
+        console.log("Your lucky number was " + luckyNumber + ". You get a 25% discount.  You will pay $" + (receipt - (receipt * 0.25)) + ".");
+        break;
+
+    case (luckyNumber = 3):
+        console.log("Your lucky number was " + luckyNumber + ". You get no discount.  You will have to pay $" + receipt + ".");
+        break;
+
+    case (luckyNumber = 4):
+        console.log("Your lucky number was " + luckyNumber + ". You get a 50% discount.  You will have to pay $" + (receipt - (receipt * 0.5)) + ".");
+        break;
+
+    case (luckyNumber = 5):
+        console.log("Your lucky number was " + luckyNumber + ". You get a 100% discount.  You will have to pay $" + (receipt - (receipt * 1)) + ".");
+        break;
 }
