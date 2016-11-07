@@ -100,6 +100,10 @@ switch(luckyNumber) {
 
 var luckyNumber = Math.floor(Math.random()* 6);
 var receipt = 60;
+var discount1 = 0.1;
+var discount2 = 0.25;
+var discount4 = 0.5;
+var discount5 = 1;
 
 switch (luckyNumber) {
     case (luckyNumber = 0):
@@ -107,11 +111,11 @@ switch (luckyNumber) {
         break;
 
     case (luckyNumber = 1):
-        console.log("Your lucky number was " + luckyNumber + ". You get a 10% discount.  You will pay $" + (receipt - (receipt * 0.1)) + ".");
+        console.log("Your lucky number was " + luckyNumber + ". You get a 10% discount.  You will pay $" + (receipt - (receipt * discount1)) + ".");
         break;
 
     case (luckyNumber = 2):
-        console.log("Your lucky number was " + luckyNumber + ". You get a 25% discount.  You will pay $" + (receipt - (receipt * 0.25)) + ".");
+        console.log("Your lucky number was " + luckyNumber + ". You get a 25% discount.  You will pay $" + (receipt - (receipt * discount2)) + ".");
         break;
 
     case (luckyNumber = 3):
@@ -119,10 +123,10 @@ switch (luckyNumber) {
         break;
 
     case (luckyNumber = 4):
-        console.log("Your lucky number was " + luckyNumber + ". You get a 50% discount.  You will have to pay $" + (receipt - (receipt * 0.5)) + ".");
+        console.log("Your lucky number was " + luckyNumber + ". You get a 50% discount.  You will have to pay $" + (receipt - (receipt * discount4)) + ".");
         break;
 
     case (luckyNumber = 5):
-        console.log("Your lucky number was " + luckyNumber + ". You get a 100% discount.  You will have to pay $" + (receipt - (receipt * 1)) + ".");
+        console.log("Your lucky number was " + luckyNumber + ". You get a 100% discount.  You will have to pay $" + (receipt - (receipt * discount5)) + ".");
         break;
 }
