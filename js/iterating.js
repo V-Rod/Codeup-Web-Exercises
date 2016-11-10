@@ -19,5 +19,16 @@
     console.log(names[2]);
     console.log(names[3]);
 
+// Exercise 3.5.1
+// Modify the code that logs the names array elements individually to instead use a for loop.
+// Below the for loop, use a forEach loop to print the names again.
+    for (var i = 0; i < names.length; i++) {
+        console.log('The names at index ' + i + ' is ' + names[i] + '.');
+    }
+
+    names.forEach(function(element, index, array) {
+        console.log('This is the forLoop exercise.');
+        console.log('The names at ' + index + ' is ' + element);
+    })
 
 })();
