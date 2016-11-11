@@ -11,45 +11,50 @@
 // Be creative and add at least 5 books to the array
  var books = [
      {
-         book1 : {
-             title: 'Pride & Prejudice',
-             author: {
-                 firstName: 'Jane',
-                 lastName: 'Austen'
-             }
-         },
-
-         book2 : {
-             title : 'Treasure Island',
-             author : {
-                 firstName : 'Robert Louis',
-                 lastName : 'Stevenson'
-             }
-         },
-
-         book3 : {
-             title : 'Dracula',
-             autor : {
-                 firstName : 'Bram',
-                 lastName : 'Stocker'
-             }
-         },
-
-         book4 : {
-             title : 'War and Peace',
-             author : {
-                 firstName: 'Leo',
-                 lastName : 'Tolstoy'
-             }
-         },
-
-         book5 : {
-             title : 'JavaScript : The Good Parts',
-             author : {
-                 firstName : 'Douglas',
-                 lastName : 'Crockford'
-             }
+         book: 0,
+         title: 'Pride & Prejudice',
+         author: {
+             firstName: 'Jane',
+             lastName: 'Austen'
          }
+     },
+
+     {
+         book : 1,
+         title : 'Treasure Island',
+         author : {
+             firstName : 'Robert Louis',
+             lastName : 'Stevenson'
+         }
+     },
+
+     {
+
+         book: 2,
+         title: 'Dracula',
+         author: {
+             firstName: 'Bram',
+             lastName: 'Stocker'
+         }
+     },
+     {
+
+         book: 3,
+         title: 'War and Peace',
+         author: {
+             firstName: 'Leo',
+             lastName: 'Tolstoy'
+         }
+     },
+
+     {
+         book : 4,
+         title : 'JavaScript : The Good Parts',
+         author : {
+             firstName : 'Douglas',
+             lastName : 'Crockford'
+         }
+
 
      }
 
@@ -59,21 +64,18 @@
 // console.log(books);
 console.log(books);
 
+// grab the first element
+var book = books [0];
 
+//log out the book number, its title and its author's first and last name
+console.log('Title is ' + book.title + ' written by ' + book.author.firstName + ' ' + book.author.lastName + '.');
 
+//if we follow the pattern of repeating code, then we can do a for Each loop
 
-// todo:
-// Loop through the array of books using .forEach and print out the specified information about each one.
-// start loop here
-
-//books.forEach(function (book) {
-  //      console.log('Book # ' + book);
-  //  });
-
-
-//console.log("Title: " + todo);
-//console.log("Author: " + todo);
-//console.log("---");
-// end loop here
+books.forEach (function (book, index) {
+    //var fullName = book.author.firstName + ' ' + book.author.lastName;
+    //var message = ('Book number# ' + (index + 1) + ' title is ' + book.title + ' written by ' + fullName);
+    console.log('Book number# ' + (index + 1) + ' title is ' + book.title + ' written by ' + book.author.firstName + ' ' + book.author.lastName + '.');
+});
 
 
