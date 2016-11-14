@@ -23,6 +23,7 @@
         var intervalID = setInterval(function updateTimer() {
             if (detonationTimer == 0) {
                 alert('EXTERMINATE!');
+                clearInterval(intervalID);
                 document.body.innerHTML = 'DEAD!';
             } else if (detonationTimer > 0) {
 
