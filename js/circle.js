@@ -13,12 +13,12 @@
 
         logInfo: function (doRounding) {
             // TODO: complete this method.
-            var round = (doRounding) ? Math.round(this.getArea()) : this.getArea();
-            if (doRounding == true) {
-                round = Math.round(this.getArea());
-            } else{
-                round = this.getArea();
-            }
+            var round = (doRounding) ? Math.round(this.getArea()) : this.getArea();//ternary
+            //if (doRounding == true) {
+              //  round = Math.round(this.getArea());
+            //} else{
+              //  round = this.getArea();
+            //}
             // If doRounding is true, round the result to the nearest integer.
             // Otherwise, output the complete value
 
