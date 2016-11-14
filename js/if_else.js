@@ -1,13 +1,113 @@
 /**
  * Created by V-Rod on 11/3/16.
  */
-"use strict";
+'use strict';
 
-/*var studentgrade = (70 + 80 + 95)/3;
+//var studentgrade = (70 + 80 + 95)/3;
+
+
+(function() {
+
+    var getGradeOne;
+    var getGradeTwo;
+    var getGradeThree;
+
+
+    function askForGrade1() {
+        getGradeOne = prompt('Please enter the first grade');
+        console.log(getGradeOne);
+    }
+
+
+    function askForGrade2() {
+        getGradeTwo = prompt('Please enter the second grade');
+        console.log(getGradeTwo);
+    }
+
+    function askForGrade3() {
+        getGradeThree = prompt('Please enter the second grade');
+        console.log(getGradeThree);
+
+    }
+
+     askForGrade1();
+     askForGrade2();
+     askForGrade3();
 
 
 
-if (studentgrade >= 80) {
+
+    function averageGrades(grade1, grade2, grade3){
+        var message;
+        var average = (grade1 + grade2 + grade3) / 3;
+        console.log(average);
+        if (average <= 80) {
+            message = 'You need to study more';
+        } else {
+            message = 'Good job!'
+        }
+
+        return message;
+    }
+
+    var grade1 = parseInt(getGradeOne);
+    var grade2 = parseInt(getGradeTwo);
+    var grade3 = parseInt(getGradeThree);
+
+    var result = alert(averageGrades(grade1, grade2, grade3));
+
+})();
+
+
+
+
+// 3.3.1
+
+// returns a string with a message that contains the name of the person shopping, and
+// the total amount they will pay
+// ex. 'Zach\'s total is $225, he will pay $200' // if a discount is applied
+
+function calculateHEBDiscount(shopperName, groceryTotal, discountPercent) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// will take in two strings, and randomly pick one of the two strings to return
+//function decideBetweenOptions(theFirstOption, theSecondOption) {
+
+//}
+
+
+
+
+
+
+
+
+/*if (studentgrade >= 80) {
     console.log("Operation was successful");
 } else {
     console.log("Oops, something went wrong.  Try again!")

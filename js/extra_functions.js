@@ -84,7 +84,7 @@ switch (typeOfOperation) {
         alert('Please refresh the page and try again');
 
 }
-
+alert(res);
 console.log(res);
 
 
