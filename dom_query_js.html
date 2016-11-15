@@ -25,49 +25,136 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id="btn1">Button 1</button>
+<button id="btn2">Button 2</button>
+<button id="btn3">Button 3</button>
+<button id="btn4">Button 4</button>
+<button id="btn5">Button 5</button>
+<h2 id="message">This Countdown timer will last <span id="timer">100</span> seconds...</h2>
+<button id="startCountdown">Start Countdown</button>
+<button id="stopCountdown">Stop Countdown</button>
+
 <script>
     (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-         var mainHeader = document.getElementById("main-header");
+        // var mainHeader = document.getElementById("main-header");
         //console.log(mainHeader);
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool";
+        // mainHeader.innerHTML = "JavaScript is Cool";
 
         // TODO: Uncomment the next line and get the sub header element by id
-        var subHeader = document.getElementById("sub-header");
+        // var subHeader = document.getElementById("sub-header");
         //console.log(subHeader);
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
+        //subHeader.style.color = "blue";
 
         // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName("li");
-        console.log(listItems);
+        // var listItems = document.getElementsByTagName("li");
+        //console.log(listItems);
 
         // TODO: Set text color on every other list item to grey
 
 
-        for (var i = 0; i < listItems.length; i +=2) {
-            listItems[i].style.color = "gray";
-        }
+       // for (var i = 0; i < listItems.length; i += 2) {
+        //    listItems[i].style.color = "gray";
+        //}
 
         // TODO: Set text color of li with dbid = 1 to blue
-        for (var i = 0; i < listItems.length; i ++) {
-            if (listItems[i].getAttribute("data-dbid") == 1) {
-                listItems[i].style.color = "blue";
+        //for (var i = 0; i < listItems.length; i++) {
+        //    if (listItems[i].getAttribute("data-dbid") == 1) {
+        //        listItems[i].style.color = "blue";
+        //    }
+
+       // }
+
+        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+        //var subParagraphs = document.getElementsByClassName("sub-paragraph");
+        //console.log(subParagraphs);
+
+        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        //subParagraphs[0].innerHTML = "Mission Accomplished!";
+
+        // TODO: Attach click event listeners to each of the buttons
+
+
+        var listItems = document.getElementsByTagName("li");
+        var subParagraphs = document.getElementsByClassName("sub-paragraph");
+
+
+        //--------------Button 1
+        var listener1 = function () {
+            var mainHeader = document.getElementById("main-header");
+            mainHeader.innerHTML = "JavaScript is Cool";
+        }
+        document.getElementById('btn1').addEventListener('click', listener1, false);
+
+
+        //-------------Button 2
+        var listener2 = function () {
+            var subHeader = document.getElementById("sub-header");
+            subHeader.style.color = "blue";
+        }
+        document.getElementById('btn2').addEventListener('click', listener2, false);
+
+        //-------------Button 3
+        var listener3 = function () {
+            for (var i = 0; i < listItems.length; i += 2) {
+                    listItems[i].style.color = "gray";
+                }
+
+        }
+        document.getElementById('btn3').addEventListener('click', listener3, false);
+
+        //-------------Button 4
+        var listener4 = function () {
+            for (var i = 0; i < listItems.length; i++) {
+                if (listItems[i].getAttribute("data-dbid") == 1) {
+                    listItems[0].style.color = "blue";
+                }
             }
 
         }
+        document.getElementById("btn4").addEventListener("click", listener4, false);
+
+        //------------Button 5
+        var listener5 = function () {
+            subParagraphs[0].innerHTML = "Mission Accomplished";
+
+        }
+        document.getElementById("btn5").addEventListener("click", listener5, false);
 
 
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-         var subParagraphs = document.getElementsByClassName("sub-paragraph");
-        console.log(subParagraphs);
+        // TODO Create a countdown that can be triggered by a button and stop it with another
 
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].textContent = "Mission Accomplished!";
+        //------------Start Countdown Button
+        var countdownTimer = 100;
+        var interval = 1000;
+        var myTimer;
+
+        var listener6 = function() {
+            myTimer = setInterval(function updateTimer() {
+                if (countdownTimer == 0) {
+                    //alert('EXTERMINATE!');
+                    clearInterval(intervalID);
+                    document.body.innerHTML = 'ZERO';
+                } else if (countdownTimer > 0) {
+                    document.getElementById('timer').innerHTML = countdownTimer;
+                }
+                countdownTimer--;
+            }, interval);
+        }
+        document.getElementById("startCountdown").addEventListener("click", listener6, false);
+
+        var listener7 = function() {
+            clearInterval(myTimer);
+
+        }
+        document.getElementById('stopCountdown').addEventListener("click", listener7);
+
+
     })();
 </script>
 </body>

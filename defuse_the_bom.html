@@ -33,8 +33,7 @@
                     detonationTimer--;
         }, interval);
 
-        // TODO: When this function runs, it needs to
-        // cancel the interval/timeout for updateTimer()
+        // TODO: When this function runs, it needs cancel the interval/timeout for updateTimer()
         function defuseTheBOM() {
             if (detonationTimer > 0) {
                 clearInterval(intervalID);
