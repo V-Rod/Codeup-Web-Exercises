@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<div class="container-fluid wrapper" id="box">
+<div class="container-fluid" id="box">
 
     <div id="main-header">
 
@@ -23,11 +23,11 @@
 
     <div class="row" id="display">
 
-        <input type="text" id="displayLeft" readonly>
+        <input type="text" id="displayLeft" size="30" readonly>
 
-        <input type="text" id="displayCenter" readonly>
+        <input type="text" id="displayCenter" size="12" readonly>
 
-        <input type="text" id="displayRight" readonly>
+        <input type="text" id="displayRight" size="30" readonly>
 
     </div>
 
@@ -76,6 +76,15 @@
             <button value="=" id="equals" class="btn btn-primary col-md-2 operations">=</button>
 
             <button value="/" class="btn btn-primary col-md-3 operations signs">/</button>
+
+        </div>
+
+        <div class="row">
+
+            <button id="%" value="%" class="btn btn-primary col-md-2 add-on-operations signs">%</button>
+            <button id="decimalBtn" value="." class="btn btn-primary col-md-2 decimal number">.</button>
+            <button id="sqrt" value="sqrt" class="btn btn-primary col-md-3 add-on-operations signs">sqrRt</button>
+
         </div>
 
 
@@ -85,6 +94,7 @@
 
 
 <script src="js/calculator_js.js"></script>
+
 
 </body>
 </html>

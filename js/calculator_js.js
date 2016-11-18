@@ -5,31 +5,44 @@
 
 (function () {
 
-
-
     //---Displays
     var left = document.getElementById("displayLeft");
     var operator = document.getElementById("displayCenter");
     var right = document.getElementById("displayRight");
+    var decimalPressOnce = false;
 
 
-    //--Digits
+    //--Getting numbers, presses and sending them to the displays
     var pressNumberButton = function () {
         var numberButtons = document.getElementsByClassName("number");
         for (var i = 0; i < numberButtons.length; i++) {
             numberButtons[i].addEventListener("click", sendNumberToTop);
+            console.log(numberButtons);
         }
+
     };
 
     var sendNumberToTop = function () {
         if (operator.value == "") {
+            if(this.id == "decimalBtn") { //If what I'm clicking is a button with an id "decimalBtn"
+                if (decimalPressOnce == false) {
+                    decimalPressOnce = true;
+                } else {
+                    return;
+                }
+            }
             left.value += this.getAttribute("value");
         } else {
             right.value += this.getAttribute("value");
         }
 
     };
+
     pressNumberButton();
+
+    //--Decimal Point Problem: in order to prevent the user to add more than once decimal
+    //point to any display
+
 
 
     //--Operands
@@ -61,14 +74,17 @@
         var result;
 
         if (y == "+") {
-            result = parseFloat(x) + parseFloat(z);
+            result = (parseFloat(x) + parseFloat(z));
         } else if (y == "-") {
-            result = parseFloat(x) - parseFloat(z);
+            result = (parseFloat(x) + (-parseFloat(z)));
         } else if (y == "/") {
-            result = parseFloat(x) / parseFloat(z);
+            result = (parseFloat(x) / parseFloat(z));
         } else if (y == "*") {
-            result = parseFloat(x) * parseFloat(z);
-
+            result = (parseFloat(x) * parseFloat(z));
+        } else if (y == "%") {
+            result = parseFloat((x) * 0.1)
+        } else if (y == "sqrt") {
+            result = (parseFloat(Math.sqrt(x))).toFixed(4);
         }
 
         left.value = result;
@@ -86,6 +102,7 @@
             left.value = "";
             operator.value = "";
             right.value = "";
+            decimalPressOnce = false;
         });
     };
     clearDisplay();
