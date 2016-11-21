@@ -24,14 +24,13 @@
 
     var sendNumberToTop = function () {
         if (operator.value == "") {
-            if(this.id == "decimalBtn") { //If what I'm clicking is a button with an id "decimalBtn"
+            if (this.id == "decimalBtn") { //If what I'm clicking is a button with an id "decimalBtn"
                 if (decimalPressOnce == false) {
                     decimalPressOnce = true;
                 } else {
                     return;
                 }
-            }
-            left.value += this.getAttribute("value");
+            } left.value += this.getAttribute("value");
         } else {
             right.value += this.getAttribute("value");
         }
