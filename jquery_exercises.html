@@ -6,14 +6,50 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>jQuery Exercises</title>
-    <script src="js/jquery-2.2.4.js"></script>
+
 </head>
 <body>
+<div class="main-div">
+
+    <h1 class="header" id="main-header">jQuery Exercises for Codeup</h1>
+
+    <p id="main-paragraph">
+        Bacon ipsum dolor amet salami turducken bresaola, brisket ham short ribs prosciutto venison sausage picanha
+        jerky ham hock frankfurter landjaeger. Salami boudin tri-tip fatback ham hock ball tip corned beef bresaola
+        chuck. Pork loin drumstick biltong, andouille ball tip pastrami turkey fatback. Leberkas pork belly alcatra
+        frankfurter, short ribs chuck pork chop meatloaf meatball flank sirloin shankle. Tenderloin picanha tri-tip
+        venison prosciutto capicola biltong kielbasa salami jerky filet mignon pork hamburger ground round.
+    </p>
+
+    <h2 id="list-header">Unordered List</h2>
+
+    <ul id="meat-list">
+        <li>Bacon</li>
+        <li>Salami</li>
+        <li>Turducken</li>
+        <li>Pastrami</li>
+
+    </ul>
+
+</div>
+
 
 </body>
+
+<script src="js/jquery-2.2.4.js"></script>
 <script>
-    $(document).ready(function() {
-        alert( 'The DOM has finished loading!' );
+    $(document).ready(function () {
+        var headerContents = $("#main-header").text();
+        alert(headerContents);
+
+        var mainparagraph = $("#main-paragraph").css("color", "red");
+
+        var listHeader = $("#list-header").text("Favorite Sandwich Meats in NYC");
+        //alert(listHeader);
+
+
+
+
     });
 </script>
 </html>
