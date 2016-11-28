@@ -1,0 +1,10 @@
+div {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#map-canvas {
+    width: 770px;
+    height: 481px;
+
+}

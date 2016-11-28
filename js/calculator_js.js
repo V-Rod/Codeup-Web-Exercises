@@ -66,7 +66,7 @@
         equalsButton.addEventListener("click", math);
     };
 
-    var math = function () {
+    var math = function () { //change name of variable; figure out to refactor the parseFloats creating one function for all operations
         var x = left.value;
         var y = operator.value;
         var z = right.value;
@@ -80,7 +80,7 @@
             result = (parseFloat(x) / parseFloat(z));
         } else if (y == "*") {
             result = (parseFloat(x) * parseFloat(z));
-        } else if (y == "%") {
+        } else if (y == "%") { //change the id of the percentage so there is no confusion with a symbol
             result = parseFloat((x) * 0.1)
         } else if (y == "sqrt") {
             result = (parseFloat(Math.sqrt(x))).toFixed(4);
