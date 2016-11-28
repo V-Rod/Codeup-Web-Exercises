@@ -29,44 +29,46 @@
         <li class="level-2">Salami</li>
         <li class="level-2">Turducken</li>
         <li class="level-3">Pastrami</li>
-
-    </ul>
-
-    <ul class="level-1">
         <li class="item-i">I</li>
         <li class="item-ii">II
-            <ul class="level-2">
-                <li class="item-a">A</li>
-                <li class="item-b">B
-                    <ul class="level-3">
-                        <li class="item-1">1</li>
-                        <li class="item-2">2</li>
-                        <li class="item-3">3</li>
-                    </ul>
-                </li>
-                <li class="item-c">C</li>
-            </ul>
-        </li>
+        <li class="item-a">A</li>
+        <li class="item-b">B
+        <li class="item-1">1</li>
+        <li class="item-2">2</li>
+        <li class="item-3">3</li>
+        <li class="item-c">C</li>
         <li class="item-iii">III</li>
     </ul>
 
 </div>
+
+<div><p>Hello</p></div>
+<div class="selected"><p>Hello Again</p></div>
 
 
 </body>
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
-    $(document).ready(function () {
-        $("li").css("font-size", "20px");
-        $("h1").css("font-color", "red");
-        $("p").css("background-color", "yellow");
-        $("h2").css("font-color", "blue");
+    $('#main-header').click(
+            function () {
+                $(this).css("background-color", "red")
+            });
 
-        $("ul.level-2").children().css("background-color", "red");
+    $("p").dblclick(
+            function () {
+                $(this).css("font-size", "18px");
+            }
+    );
 
-        var contents = $("h1");
-        alert(contents.text());
+    $("li").hover(
+            function () {
+                $(this).css("background-color", "red");
+            },
+            function () {
+                $(this).css("background-color", "white");
+            }
+    );
 
 
 
@@ -75,6 +77,13 @@
 
 
 
-    });
+
+
+
+
+
+
+
+
 </script>
 </html>
