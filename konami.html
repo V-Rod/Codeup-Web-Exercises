@@ -15,7 +15,6 @@
 <script>
 
     "use strict";
-
     //setting variables for the keys and variable to track user input
 
     $(document).ready(function () {
@@ -24,31 +23,30 @@
         var inputCodeSequence = [];
 
 
-//set up event listener
+        //set up event listener
         $(document).keyup(function (event) {
-            console.log(event.keyCode);
+            //console.log(event.keyCode);
 
-//putting the values of the event into the new array
+            //putting the values of the event into the new array
             inputCodeSequence.push(event.keyCode);
 
-//here, the values of the input are converted into a string that can be referenced by the new variable
+            //here, the values of the input are converted into a string that can be referenced by the new variable
             var inputString = inputCodeSequence.toString();
             console.log(inputString);
 
-//if statement that will compare what the user input length on the new array with the correct sequence array length
+            //if statement that will compare what the user input length on the new array with the correct sequence array length
             if (inputCodeSequence.length > 11) {
-                alert("You have input the wrong sequence.\nPlease refresh the page and start again.");
+                alert("You have input the wrong sequence.\nPlease start again.");
                 inputCodeSequence = [];
             }
-//else if statement that will compare strings between correct sequence and user sequence input
-             else if (inputString == konamiAnswerSequence) {
-                alert("You have added 30 lives");
+            //else if statement that will compare strings between correct sequence and user sequence input
+            else if (inputString == konamiAnswerSequence) {
+                alert("You have won.  You will be rewarded with the worst song ever!");
+                window.location.replace("https://www.youtube.com/watch?v=kfVsfOSbJY0");
                 inputCodeSequence = [];
             }
         })
     });
-
-
 
 
 </script>
