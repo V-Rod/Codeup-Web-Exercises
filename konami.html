@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Konami</title>
+</head>
+<body>
+
+
+</body>
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+
+    "use strict";
+
+    //setting variables for the keys and variable to track user input
+
+    $(document).ready(function () {
+
+        var konamiAnswer = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+        var inputCodeArray = [];
+
+
+//set up event listener
+        $(document).keyup(function (event) {
+            console.log(event.keyCode);
+
+//putting the values of the event into the new array
+            inputCodeArray.push(event.keyCode);
+
+//here, the values of the input are converted into a string that can be referenced by the new variable
+            var inputString = inputCodeArray.toString();
+            console.log(inputString);
+
+//if statement that will compare what the user inputs with the correct sequence
+            if (inputCodeArray.length > 11) {
+                inputCodeArray = [];
+            }
+//if statement that will compare strings between correct sequence and user sequence input
+            if (inputString == konamiAnswer) {
+                alert("You have added 30 lives");
+                inputCodeArray = [];
+            }
+        })
+    });
+
+
+
+
+</script>
+</html>
