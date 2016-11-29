@@ -20,8 +20,8 @@
 
     $(document).ready(function () {
 
-        var konamiAnswer = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
-        var inputCodeArray = [];
+        var konamiAnswerSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+        var inputCodeSequence = [];
 
 
 //set up event listener
@@ -29,20 +29,21 @@
             console.log(event.keyCode);
 
 //putting the values of the event into the new array
-            inputCodeArray.push(event.keyCode);
+            inputCodeSequence.push(event.keyCode);
 
 //here, the values of the input are converted into a string that can be referenced by the new variable
-            var inputString = inputCodeArray.toString();
+            var inputString = inputCodeSequence.toString();
             console.log(inputString);
 
-//if statement that will compare what the user inputs with the correct sequence
-            if (inputCodeArray.length > 11) {
-                inputCodeArray = [];
+//if statement that will compare what the user input length on the new array with the correct sequence array length
+            if (inputCodeSequence.length > 11) {
+                alert("You have input the wrong sequence.\nPlease refresh the page and start again.");
+                inputCodeSequence = [];
             }
-//if statement that will compare strings between correct sequence and user sequence input
-            if (inputString == konamiAnswer) {
+//else if statement that will compare strings between correct sequence and user sequence input
+             else if (inputString == konamiAnswerSequence) {
                 alert("You have added 30 lives");
-                inputCodeArray = [];
+                inputCodeSequence = [];
             }
         })
     });
