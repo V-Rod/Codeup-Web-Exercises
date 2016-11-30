@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQUery FAQ you's</title>
+
+    <style>
+
+
+        .invisible {
+            display: none;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+<div class="container-fluid">
+    <h1 class="header" id="main-header">FAQ You's about the National Parks</h1>
+
+    <div class="definition-list-container">
+        <dl id="natl-parks">
+
+            <dt>What are National Parks?</dt>
+            <dd class="invisible">From Wikipedia: "A national park is a park in use for conservation purposes."</dd>
+
+
+            <dt>How many national parks are there?</dt>
+            <dd class="invisible">"The United States has 59 protected areas known as national parks that are operated by the
+                National Park Service, an agency of the Department of the Interior."
+            </dd>
+
+
+
+            <dt>What was the first national park?</dt>
+            <dd class="invisible">"The first national park, Yellowstone, was signed into law by President Ulysses S. Grant in 1872,
+                followed by Mackinac National Park in 1875 (decommissioned in 1895), and then Rock Creek Park (later
+                merged
+                into National Capital Parks), Sequoia and Yosemite in 1890."
+            </dd>
+
+
+            <dt>Which agency is in charge of the national parks?</dt>
+            <dd class="invisible">"The National Park Service (NPS) is an agency of the United States federal government that manages all
+                U.S. national parks, many American national monuments, and other conservation and historical properties
+                with various title designations."
+            </dd>
+
+
+
+            <dt>How old is the National Park System?</dt>
+            <dd class="invisible">"The National Park Service was created by an act signed by President Woodrow Wilson on August 25,
+                1916."
+            </dd>
+
+
+
+            <dt>How many people visit the national parks?</dt>
+            <dd class="invisible">"Total recreation visitors to the national parks in 2015: 307,247,252."</dd>
+
+
+
+            <dt>What is the largest national park?</dt>
+            <dd class="invisible">"The largest national park is Wrangell–St. Elias in Alaska: at over 8 million acres (32,000 km2), it is
+                larger than each of the nine smallest states. The next three largest parks are also in Alaska."
+            </dd>
+
+
+
+            <dt>Which national park attracts more visitors?</dt>
+            <dd class="invisible">The Great Smoky Mountains in TN/NC. In 2014, 10 million visitors went to the park.</dd>
+
+
+
+            <dt>How many national parks are located in Texas?</dt>
+            <dd class="invisible">Big Bend and Guadalupe Mountains are the only national parks in Texas.</dd>
+
+
+
+            <dt>Is Boo-Boo Bear real?</dt>
+            <dd class="invisible">Yes, he is.</dd>
+
+        </dl>
+
+        <a href="#" id="invisible-toggle">Click here if you want to see something cool</a>
+
+    </div>
+
+</div>
+
+
+</body>
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+    $(document).ready(function () {
+        $("#invisible-toggle").click(function (event) {
+            event.preventDefault();
+            $("dd").toggleClass("invisible");
+        });
+
+
+
+            
+        });
+
+</script>
+</html>
