@@ -136,7 +136,7 @@
     $(document).ready(function () {
        $("#invisible-toggle").click(function (event) {
            event.preventDefault();
-           $("dd").toggleClass("invisible");
+           $("dd").toggle();
        });
 
         $('ul').each( function () {
@@ -148,7 +148,7 @@
         //$('#smoky').children().first().css('font-weight', 'bold');
 
         $('h3').click(function () {
-            $('li').parent().toggleClass('invisible');
+            $('li').parent().toggle();
 
         })
 
