@@ -135,8 +135,7 @@
 
     $(document).ready(function () {
        $("h1").click(function (event) {
-           event.preventDefault();
-           $("dd").toggle();
+           $("dd").slideToggle();
        });
 
         $('ul').each( function () {
@@ -148,7 +147,7 @@
         //$('#smoky').children().first().css('font-weight', 'bold');
 
         $('h3').click(function () {
-            $('li').parent().toggle();
+            $('li').parent().slideUp();
 
         })
 
