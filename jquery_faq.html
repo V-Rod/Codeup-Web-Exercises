@@ -86,7 +86,7 @@
 
         </dl>
 
-        <a href="#" id="invisible-toggle">Click here if you want to see something cool</a>
+        <!--<a href="#" id="invisible-toggle">Click here if you want to see something cool</a>-->
 
     </div>
 
@@ -134,7 +134,7 @@
     "use strict";
 
     $(document).ready(function () {
-       $("#invisible-toggle").click(function (event) {
+       $("h1").click(function (event) {
            event.preventDefault();
            $("dd").toggle();
        });
