@@ -92,6 +92,41 @@
 
 </div>
 
+<div class="facts-about-parks">
+
+    <h3>Yellowstone National Park</h3>
+
+    <ul id="yellowstone">
+        <li>fact #1</li>
+        <li>fact #2</li>
+        <li>fact #3</li>
+        <li>fact #4</li>
+    </ul>
+
+    <h3>Big Bend National Park</h3>
+
+    <ul id="big-bend">
+        <li>fact #1</li>
+        <li>fact #2</li>
+        <li>fact #3</li>
+        <li>fact #4</li>
+    </ul>
+
+    <h3>Great Smoky Mountains National Park</h3>
+
+    <ul id="smoky">
+        <li>fact #1</li>
+        <li>fact #2</li>
+        <li>fact #3</li>
+        <li>fact #4</li>
+    </ul>
+
+
+
+
+
+</div>
+
 
 </body>
 <script src="js/jquery-2.2.4.js"></script>
@@ -99,10 +134,25 @@
     "use strict";
 
     $(document).ready(function () {
-        $("#invisible-toggle").click(function (event) {
-            event.preventDefault();
-            $("dd").toggleClass("invisible");
+       $("#invisible-toggle").click(function (event) {
+           event.preventDefault();
+           $("dd").toggleClass("invisible");
+       });
+
+        $('ul').each( function () {
+            $(this).children().first().css('font-weight', 'bold');
         });
+
+        //$('#yellowstone').children().first().css('font-weight', 'bold');
+        //$('#big-bend').children().first().css('font-weight', 'bold');
+        //$('#smoky').children().first().css('font-weight', 'bold');
+
+        $('h3').click(function () {
+            $('li').parent().toggleClass('invisible');
+
+        })
+
+
 
 
 
