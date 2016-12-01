@@ -2,12 +2,13 @@
 <html>
 <head>
     <title>Online Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 
 <h1>My Tool Store</h1>
 
-<table id="products">
+<table class="table table-hover" id="products">
     <thead>
     <tr>
         <th>Title</th>
@@ -19,35 +20,51 @@
     <tbody id="insertProducts"></tbody>
 </table>
 
+<button type="button" class="btn btn-primary" id="refresh">Refresh</button>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <script>
-    (function() {
+    $(document).ready(function () {
         "use strict";
+
         // TODO: Create an ajax GET request for /data/inventory.json
 
-        $.ajax({
-            url: "/data/inventory.json",
-            type: "GET",
-            data: {
-                limit:  10,
-                offset: 10
-            }
-        });
+
+        var refresh = function () {
+
+            var jqxhr = $.ajax("data/inventory.json");
+
+            jqxhr.done(function (data) {
+                //console.log( jqxhr);
+                var rows;
+                data.forEach(function (object) {
+                    rows += "<tr>"
+                            + "<td>" + object.title + "</td>"
+                            + "<td>" + object.quantity + "</td>"
+                            + "<td>" + object.price + "</td>"
+                            + "<td>" + object.categories + "</td>"
+
+                });
+                $("#insertProducts").html(rows);
+            });
+        };
+        refresh();
+
 
         // TODO: Take the data from inventory.json and append it to the products table
         //       HINT: Your data should come back as a JSON object; use console.log() to inspect
         //             its contents and fields
         //       HINT: You will want to target #insertProducts for your new HTML elements
-        $("#insertProducts").append("");
 
 
+        $('#refresh').click(function () {
+            $.ajax("data/inventory.json");
+            refresh();
 
-
-
-
-
-
+        });
 
     })();
 </script>
