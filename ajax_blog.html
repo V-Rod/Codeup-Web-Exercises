@@ -16,7 +16,20 @@
 </head>
 <body>
 
-<div id="posts"></div>
+<div class="container">
+    <div class="jumbotron">
+        <h1>su·per·flu·ous</h1>
+        <h2>/so͞oˈpərflo͞oəs/ -- a minimalist blog --</h2>
+
+    </div>
+
+</div>
+
+<div class="container">
+
+    <div id="posts"></div>
+
+</div>
 
 
 <div class="container" id="blog-form">
@@ -42,12 +55,19 @@
 
             <div class="col-md-12">
                 <div class="form-group">
+                    <input name="date" type="date" class="form-control" placeholder="Date of Submission *" id="date" required="required"
+                           data-validation-required-message="Please select the date.">
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group">
                 <input name="blog-categories" type="text" class="form-control" placeholder="Blog Categories *" id="categories" required="required"
                 data-validation-required-message="Please enter any categories.">
                 <p class="help-block text-danger"></p>
                 </div>
             </div>
-
 
             <div class="clearfix"></div>
             <div class="col-lg-12 text-center">

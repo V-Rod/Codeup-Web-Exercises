@@ -36,10 +36,10 @@ $(document).ready(function () {
 console.log(newPosts);
 $(".btn").click(function () {
     var newData = {
-        title: $("#blog-title").val(),
+        title: $("#title").val(),
         content: $("#post").val(),
         date: $("#date").val(),
-        categories: $("#blog-categories").val()
+        categories: $("#categories").val()
     };
     newPosts.push(newData);
     console.log(newPosts);
@@ -60,7 +60,7 @@ $(".btn").click(function () {
 
 
 
-/*---REMOVING BLOG POST(add a button to each blog post)---*/
+/*---REMOVING BLOG POST(removes individual blog posts)---*/
 
     var deletePost = $("#remove-post").click(function () {
         $("#blog-content").html("");
@@ -70,11 +70,13 @@ $(".btn").click(function () {
     });
 
 
+
 /*---CLEAR FUNCTION FOR THE INPUT FIELDS---*/
 
 function clear() {
-    $("#name").val("");
+    $("#title").val("");
     $("#post").val("");
+    $("#categories").val("");
 }
 
 
