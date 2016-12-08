@@ -12,14 +12,14 @@ $(document).ready(function () {
         center: {lat: 29.4267857, lng: -98.4895764},
         zoom: 12
     });
-
-
-    var marker = new google.maps.Marker({
-        position: map.center,
-        map: map,
-        animation: google.maps.Animation.DROP,
-        draggable: true
-    });
+    //
+    //
+    // var marker = new google.maps.Marker({
+    //     position: map.center,
+    //     map: map,
+    //     animation: google.maps.Animation.DROP,
+    //     draggable: true
+    // });
 
 
     //------------Google Maps Search Box Functionality on Rendered Map  ---------------------------
@@ -34,7 +34,8 @@ $(document).ready(function () {
         searchBox.setBounds(map.getBounds());
     });
 
-    var markers = [];
+    //var markers = [];
+
 
     // Listen for the event fired when the user selects a prediction and retrieve
     // more details for that place.
@@ -43,49 +44,68 @@ $(document).ready(function () {
 
         if (places.length == 0) {
             return;
+        } else {
+            var place = places[0];
         }
+        //console.log(places);
 
         // Clear out the old markers.
-        markers.forEach(function (marker) {
-            marker.setMap(null);
-        });
-        markers = [];
+        //marker.forEach(function(marker) {
+            //marker.setMap(null);
+        //});
+        //markers = [];
 
         // For each place, get the icon, name and location.
         var bounds = new google.maps.LatLngBounds();
-        places.forEach(function (place) {
-            if (!place.geometry) {
-                console.log("Returned place contains no geometry");
-                return;
-            }
-            var icon = {
-                url: place.icon,
-                size: new google.maps.Size(71, 71),
-                origin: new google.maps.Point(0, 0),
-                anchor: new google.maps.Point(17, 34),
-                scaledSize: new google.maps.Size(25, 25)
-            };
+        if (!place.geometry) {
+            console.log("Returned place contains no geometry");
+            return;
+        }
+        var icon = {
+            url: place.icon,
+            size: new google.maps.Size(71, 71),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(17, 34),
+            scaledSize: new google.maps.Size(25, 25)
+        };
 
-            // Create a marker for each place.
-            markers.push(new google.maps.Marker({
-                map: map,
-                icon: icon,
-                title: place.name,
-                position: place.geometry.location,
-                animation: google.maps.Animation.DROP,
-                draggable: true
-            }));
+        // Create a marker for each place.
 
-            if (place.geometry.viewport) {
-                // Only geocodes have viewport.
-                bounds.union(place.geometry.viewport);
-            } else {
-                bounds.extend(place.geometry.location);
-            }
-        });
+        setMarkerAndAddEventListener(map, icon, place);
+
+        if (place.geometry.viewport) {
+            // Only geocodes have viewport.
+            bounds.union(place.geometry.viewport);
+        } else {
+            bounds.extend(place.geometry.location);
+        }
+
         map.fitBounds(bounds);
     });
 
+
+
+
+    function setMarkerAndAddEventListener(map, icon, place) {
+        //
+        var marker = new google.maps.Marker({
+            map: map,
+            icon: icon,
+            title: place.name,
+            position: place.geometry.location,
+            animation: google.maps.Animation.DROP,
+            draggable: true
+        });
+
+        google.maps.event.addListener(marker, "dragend", function (event) {
+            var lat = event.latLng.lat();
+            var lng = event.latLng.lng();
+            requestWeatherData(lat, lng);
+        });
+
+
+
+    }
 
 //------------ Populate Forecast on DOM --------------------
 
@@ -106,12 +126,6 @@ $(document).ready(function () {
 
     }
 
-    google.maps.event.addListener(marker, "dragend", function (event) {
-            var lat = event.latLng.lat();
-            var lng = event.latLng.lng();
-        requestWeatherData(lat, lng);
-    });
-
     function requestWeatherData(lat, lng) {
         var weatherData = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
             APPID: "160c9066e7b4a7d7c0e4f9795167de0f",
@@ -125,7 +139,7 @@ $(document).ready(function () {
         //------------ Weather API OpenWeatherMap done function ----------------
 
         weatherData.done(function (data) {
-            console.log(data);
+            //console.log(data);
             var city = data.city.name;
             $("#city").html(city);
             var columns = [];
